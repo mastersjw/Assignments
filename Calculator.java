@@ -1,13 +1,9 @@
 package com.mastersjw.calculator;
 import java.util.ArrayList;
 
-public class Calculator implements java.io.Serializable {
-	
-	private static final long serialVersionUID = 1L;
-	private double num1;
-	private double num2;
+public class Calculator{
+	private double num1,num2,result;
 	private String operator;
-	private double result;
 	private ArrayList<Object> s;
 	
 	public Calculator() {
@@ -28,7 +24,7 @@ public class Calculator implements java.io.Serializable {
 		if (!op.equals("=")) s.add(op);
 		//else run through the array list left to right performing operations
 		else {			
-			//going to go through the array list setting num1,num2,operator then call perform operation
+			//go through the arrayList setting num1,num2,operator then call perform operation
 			//and put the result on the front of the arrayList
 			while (!s.isEmpty() && s.size() !=1) {
 				this.num1 = (double)s.get(0);
@@ -42,8 +38,7 @@ public class Calculator implements java.io.Serializable {
 			}
 			//only 1 item in arrayList. set to result and remove it
 			if(s.size()==1) {
-				result = (double)s.get(0);
-				s.remove(0);
+					s.remove(0);
 			}
 		}
 	}
