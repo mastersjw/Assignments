@@ -36,7 +36,7 @@ public class Calculator{
 				this.performOperation();
 				s.add(0,result);
 			}
-			//only 1 item in arrayList. set to result and remove it
+			//only 1 item in arrayList..It is the result but result is already set so remove it!
 			if(s.size()==1) {
 					s.remove(0);
 			}
