@@ -18,11 +18,11 @@ public class Calculator{
 		else System.out.println("Error Bad input");
 	}
 	
-	//overload method that takes in a String
+	//overload method that takes in a String +,-,*,/
 	public void performOperation(String op) {
-		//if not and equals then just add it the array list
+		//if not "=" then just add it the arrayList must be +,-,*,/
 		if (!op.equals("=")) s.add(op);
-		//else run through the array list left to right performing operations
+		//else run through the array list left to right performing operations all + or - 
 		else {			
 			//go through the arrayList setting num1,num2,operator then call perform operation
 			//and put the result on the front of the arrayList
@@ -58,10 +58,10 @@ public class Calculator{
 				this.performOperation();
 				s.add(result);
 			}
-			//the last operand was a + or - so just add the number
+			//the last operand was a + or - so just add the number to ArrayList
 			else s.add(num);
 		}
-		//first number in equation..add it
+		//first number in equation..add it to arrayList
 		else s.add(num);
 	}
 	
